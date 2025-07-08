@@ -405,7 +405,7 @@ body{
     width: clamp(300px, 80vw, 1200px);
     height: clamp(400px, 85vh, 90vh);
     margin: 30px 0 0 0;
-    background: #7fcbe9;
+
 }
 
 .main .contenido_proyectos .titulo_proyectos{
@@ -428,43 +428,69 @@ body{
 
 .main .contenido_proyectos .contenido_tarjetas .tarjeta_1{
     grid-area: tarjeta_1;
-    background: #5237e8;
-    width: 100%;
+    width: 537px;
     height: 250px;
     position: relative;
-    
 }
 
-.main .contenido_proyectos .contenido_tarjetas .tarjeta_1 .card{
+.main .contenido_proyectos .contenido_tarjetas .tarjeta_1 .card1,
+.main .contenido_proyectos .contenido_tarjetas .tarjeta_2 .card2{
     height: 100%;
     width: 100%;
-    clip-path: polygon(0% 15%, 36% 15%, 36% 0, 85% 0%, 100% 0, 100% 15%, 100% 85%, 73% 85%, 73% 100%, 15% 100%, 0 100%, 0% 85%);
-    position: absolute;
+    clip-path: path("M 0 70.5 C 0 46.25 0 44.25 35.2 45.25 L 188.8 44.25 C 215 39.25 184.8 0 225 0 L 494.4 0 C 537.6 0 539.6 0 537.6 31.25 L 537.6 187.5 C 537.6 214.75 516.6 200.75 461.4 205.75 L 342.8 205.75 C 324.6 212.75 344.8 244 329.6 250 L 41.2 250 C 0 250 0 250 0 218.75 L 0 125 Z");
     overflow: hidden;
 }
 
-.main .contenido_proyectos .contenido_tarjetas .tarjeta_1 .card img{
+.main .contenido_proyectos .contenido_tarjetas .tarjeta_1 .card1 img,
+.main .contenido_proyectos .contenido_tarjetas .tarjeta_2 .card2 img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     }
 
-.main .contenido_proyectos .contenido_tarjetas .tarjeta_1 .titulo_card1 {
+.main .contenido_proyectos .contenido_tarjetas .tarjeta_1 .titulo_card1{
     position: absolute;
     top: 0;
     left: 0;
-    height: 17px;
-    width: 67px;
+    height: 15%;
+    width: 36%;
     background: #df2f2f;
+    clip-path: inset(0.5px round 8px);
+}
+
+.main .contenido_proyectos .contenido_tarjetas .tarjeta_1 .button1{
+    position: absolute;
+    top: 213px;
+    left: 342px;
+    height: 15%;
+    width: 36%;
+    background: #df2f2f;
+    clip-path: inset(0.5px round 8px);
 }
 
 .main .contenido_proyectos .contenido_tarjetas .tarjeta_2{
     grid-area: tarjeta_2;
-    background: #5237e8;
-    width: 100%;
+    width: 537px;
     height: 250px;
-    clip-path: polygon(0% 15%, 36% 15%, 36% 0, 85% 0%, 100% 0, 100% 15%, 100% 85%, 73% 85%, 73% 100%, 15% 100%, 0 100%, 0% 85%);
 }
+
+.main .contenido_proyectos .contenido_tarjetas .tarjeta_2 .button2{
+    position: absolute;
+    top: 213px;
+    left: 342px;
+    height: 15%;
+    width: 36%;
+    background: #5e3030;
+    clip-path: inset(0.5px round 8px);
+}
+/*
+.main .contenido_proyectos .contenido_tarjetas .tarjeta_2 .card2{
+    height: 100%;
+    width: 100%;
+    clip-path: path("M 0 70.5 C 0 46.25 0 44.25 35.2 45.25 L 188.8 44.25 C 215 39.25 184.8 0 225 0 L 494.4 0 C 537.6 0 539.6 0 537.6 31.25 L 537.6 187.5 C 537.6 214.75 516.6 200.75 461.4 205.75 L 342.8 205.75 C 324.6 212.75 344.8 244 329.6 250 L 41.2 250 C 0 250 0 250 0 218.75 L 0 125 Z");
+    overflow: hidden;
+}
+*/
 
 .main .contenido_proyectos .contenido_tarjetas .tarjeta_3{
     grid-area: tarjeta_3;
