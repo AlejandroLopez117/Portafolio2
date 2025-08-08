@@ -18,7 +18,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 330px 0 330px;
+    margin: 20px 330px 20px 330px;
     border-radius: 8px;
     padding: 10px;
 }
@@ -91,15 +91,47 @@ body{
     text-align: start;
 }
 
+.header .contenido_imagen_cabecera .figura{
+    width: 100%;
+    height: 100%;
+    background: #2D52F6;
+    clip-path: path("M 142.38 740 L 952 740 L 952 80 L 418.59 80 C 381.66 80 366.89 90.55 356.69 116.92 L 22.08 676.02 C 0 718.73 15.84 740 46.92 740 L 142.38 740 Z");
+
+    /* Propiedades iniciales para la animación */
+    opacity: 0;
+    transform: translateY(-50px); /* O puedes usar translateX() para un movimiento lateral */
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    animation-duration: 1.2s;
+    animation-name: entradaFigura;
+}
+
+/* Definición de la animación */
+@keyframes entradaFigura {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50px);
+    }
+}
 /*Cabecera*/
 
+.contenido_header{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
 .cabecera{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 350px;
-    padding: 50px 0 0 0;
+    height: 800px;
+    padding: 50px 0 200px 30px;
     flex-direction: column;
 }
 
@@ -109,9 +141,9 @@ body{
     color: #F3F3F3;
 }
 
-.cabecera .titulo {
+.cabecera .titulo{
     font-size: 33px;
-    padding: 25px;
+    padding: 25px 25px 25px 0;
     color: #2D52F6;
 }
 
@@ -184,6 +216,8 @@ body{
 
 
 
+
+
 /* Asignación explícita de áreas a hijos */
 .lenguajes {
     grid-area: lenguajes;
@@ -233,6 +267,7 @@ body{
     transition: 0.5s;
     box-shadow: 4px 5px 7px 0px rgba(3, 0, 29, 1);
 }
+
 
 .lenguajes .imagenes_lenguajes .html:hover ,
 .css:hover ,
@@ -517,7 +552,22 @@ body{
 
 /*Footer*/
 
-footer{
-    width: clamp(300px, 80vw, 1200px); /* Mínimo: 300px, Ideal: 80% del viewport, Máximo: 1200px */
-    height: clamp(400px, 85vh, 90vh); /* Altura adaptable */
+.contacto{
+    width: 100%;
+    min-height: 100vh; /* Altura mínima flexible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contacto .titulo_contacto{
+    width: clamp(300px, 80vw, 1200px);
+    height: clamp(400px, 85vh, 90vh);
+    margin: 0;
+}
+
+.contacto .titulo_contacto h2{
+    margin: 40px;
+    color:#F3F3F3
 }
